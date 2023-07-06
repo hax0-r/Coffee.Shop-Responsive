@@ -1,0 +1,1288 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  --black: #1b1b1d;
+  --gray: #eff0f2;
+}
+
+header {
+  background: rgb(238, 239, 241);
+}
+
+.nav-main {
+  display: flex;
+  justify-content: space-between;
+  height: 5rem;
+}
+
+.nav-img {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+.nav-links ul {
+  display: flex;
+  margin-top: 0.6rem;
+}
+.nav-links ul li {
+  margin: 0 1.5rem;
+}
+.nav-links ul li a {
+  color: var(--black);
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+}
+
+.nav-img img {
+  height: 3rem;
+}
+
+.nav-icon-purchase-btn {
+  display: flex;
+  align-items: center;
+}
+.nav-icon-purchase-btn i {
+  background-color: white;
+  padding: 0.5rem;
+  margin-right: 1rem;
+  border-radius: 50%;
+  border: none;
+  box-shadow: 0px 30px 60px rgba(163, 168, 179, 0.15);
+  cursor: pointer;
+}
+.nav-icon-purchase-btn button {
+  background-color: var(--black);
+  color: #ffffff;
+  padding: 10px 25px;
+  border: none;
+  gap: 10px;
+  border-radius: 63px;
+  font-weight: 500;
+  box-shadow: 0px 30px 60px rgba(163, 168, 179, 0.15);
+  font-family: "Jost", sans-serif;
+}
+
+.nav-icon-bar {
+  display: none;
+  align-items: center;
+}
+
+@media screen and (max-width: 992px) {
+  .nav-links {
+    display: none;
+  }
+  .nav-icon-purchase-btn button {
+    display: none;
+  }
+  .nav-icon-purchase-btn i {
+    display: none;
+  }
+  .nav-icon-bar {
+    display: block;
+  }
+  .nav-icon-bar i {
+    margin: 1rem 0.4rem;
+    background-color: #fff;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 50%;
+  }
+  .nav-icon-bar span i {
+    background-color: transparent;
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav-img img {
+    height: 2rem;
+  }
+}
+.nav-list {
+  display: none;
+}
+
+@keyframes myAnim {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 1;
+    transform: translateY(-45px);
+  }
+  24% {
+    opacity: 1;
+  }
+  40% {
+    animation-timing-function: ease-in;
+    transform: translateY(-24px);
+  }
+  65% {
+    animation-timing-function: ease-in;
+    transform: translateY(-12px);
+  }
+  82% {
+    animation-timing-function: ease-in;
+    transform: translateY(-6px);
+  }
+  93% {
+    animation-timing-function: ease-in;
+    transform: translateY(-4px);
+  }
+  25%, 55%, 75%, 87% {
+    animation-timing-function: ease-out;
+    transform: translateY(0px);
+  }
+  100% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.main-page {
+  display: flex;
+  justify-content: space-around;
+}
+
+.page1-content1 {
+  display: flex;
+  align-items: center;
+}
+
+.page1-content h1 {
+  font-family: "Jost", sans-serif;
+  font-weight: 800;
+  font-size: 5rem;
+  line-height: 80px;
+}
+.page1-content p {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 23px;
+  color: #64646a;
+  margin: 2rem 0;
+  width: 21rem;
+}
+
+.page1-btn {
+  margin-bottom: 3rem;
+  display: flex;
+}
+.page1-btn button {
+  background-color: var(--black);
+  color: #ffffff;
+  padding: 10px 25px;
+  border: none;
+  gap: 10px;
+  border-radius: 63px;
+  font-weight: 500;
+  box-shadow: 0px 30px 60px rgba(163, 168, 179, 0.15);
+  font-family: "Jost", sans-serif;
+}
+.page1-btn a {
+  font-family: "Jost";
+  font-style: normal;
+  text-decoration: underline;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: #1b1b1d;
+  margin-left: 18px;
+  margin-top: 0.2rem;
+}
+
+.page1-img img {
+  height: 34rem;
+}
+
+#btnScroll {
+  width: 4rem;
+  z-index: 999;
+  height: 4rem;
+  background-color: rgb(238, 239, 241);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  text-align: center;
+  border: none;
+  border-radius: 50%;
+  position: fixed;
+  right: 2rem;
+  bottom: 2.5rem;
+}
+#btnScroll i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 992px) {
+  .page1-img img {
+    height: 22rem;
+  }
+  .page1-content h1 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+  .active {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: none;
+    width: 15rem;
+    height: 100vh;
+    top: 0%;
+    position: absolute;
+    left: 0%;
+    animation: myAnim 0.1s ease-in-out 0s 1 normal both;
+  }
+  .active ul {
+    margin-top: 2rem;
+  }
+  .active ul li {
+    margin: 2rem 1rem;
+  }
+  .active ul li a {
+    color: #1b1b1d;
+  }
+}
+@media screen and (max-width: 768px) {
+  .page1-content h1 {
+    font-size: 3rem;
+    line-height: 3.1rem;
+  }
+  .page1-content p {
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+    color: #64646a;
+    margin: 1.3rem 0;
+    width: 17rem;
+  }
+  .page1-img img {
+    height: 18rem;
+  }
+  .page1-btn button {
+    padding: 10px 18px;
+    width: 10.5rem;
+    gap: 8px;
+  }
+  .page1-btn a {
+    margin-top: 0.2rem;
+    width: 8rem;
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .main-page {
+    display: unset;
+    justify-content: unset;
+  }
+  .page1-content1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+  .page1-content h1 {
+    font-size: 3rem;
+    line-height: 1em;
+  }
+  .page1-content p {
+    font-size: 14px;
+    margin: 2rem 0;
+    width: 20rem;
+  }
+  .page1-btn {
+    display: flex;
+    justify-content: center;
+    margin-bottom: unset;
+  }
+  .page1-btn button {
+    padding: 10px 18px;
+    width: 8rem;
+    gap: 8px;
+    font-size: 0.7rem;
+  }
+  .page1-btn a {
+    width: 7rem;
+    margin-top: 0.2rem;
+    font-size: 0.9rem;
+  }
+  .page1-img {
+    display: flex;
+    justify-content: center;
+  }
+  .page1-img img {
+    height: 15rem;
+  }
+  .hero {
+    margin-top: 1rem;
+  }
+}
+@media screen and (max-width: 335px) {
+  .page1-content h1 {
+    font-size: 2.7rem;
+  }
+  .page1-content p {
+    font-size: 14px;
+    margin: 2rem 0;
+    width: 18rem;
+  }
+}
+.background-only {
+  background: linear-gradient(173.34deg, #ffffff 0%, #ffffff 0%, rgba(243, 244, 245, 0.2) 11.74%, #f3f4f5 27.92%, rgba(243, 244, 245, 0) 44.79%, rgba(243, 244, 245, 0.68) 60.42%, #f3f4f5 79.17%, #ffffff 100%);
+}
+
+.page2 {
+  position: relative;
+}
+
+.page2-heading {
+  padding-top: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.page2-heading h1 {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 2.7rem;
+  display: flex;
+  justify-content: center;
+  color: #1b1b1d;
+  text-align: center;
+  z-index: 9;
+}
+.page2-heading p {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  margin-top: 1rem;
+  text-align: center;
+  color: #64646a;
+  width: 23rem;
+}
+
+.page2-cards {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 3rem;
+  position: relative;
+}
+
+.page2-card1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 20rem;
+  height: 24rem;
+  margin: 1rem;
+  background: linear-gradient(152.09deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  filter: drop-shadow(0px 30px 60px rgba(163, 168, 179, 0.15));
+  border-radius: 24px;
+}
+.page2-card1 h5 {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: #1b1b1d;
+}
+.page2-card1 p {
+  font-family: "Jost";
+  margin-top: 0.5rem;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  color: #64646a;
+}
+.page2-card1 button {
+  background-color: var(--black);
+  color: #ffffff;
+  padding: 10px 25px;
+  border: none;
+  gap: 10px;
+  border-radius: 63px;
+  font-weight: 500;
+  box-shadow: 0px 30px 60px rgba(163, 168, 179, 0.15);
+  font-family: "Jost", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 44px;
+  width: 195.958px;
+  text-transform: uppercase;
+}
+
+.page2-img {
+  display: flex;
+  justify-content: center;
+  margin: 2.5rem 0;
+}
+
+.page2-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.page2-half-img {
+  position: absolute;
+  top: 0;
+}
+.page2-half-img img {
+  height: 25rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .page2-card1 {
+    width: 18rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .page2-half-img img {
+    height: 20rem;
+  }
+  .page2-card1 {
+    width: 18rem;
+    height: 24rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .page2-half-img img {
+    height: 17rem;
+  }
+  .page2-cards {
+    margin-top: 2rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .page2-half-img img {
+    height: 14rem;
+  }
+  .page2-heading h1 {
+    font-size: 2.2rem;
+  }
+  .page2-heading p {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .page2-half-img img {
+    height: 12rem;
+  }
+  .page2-heading h1 {
+    font-size: 2rem;
+  }
+  .page2-heading p {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 376px) {
+  .page2-half-img img {
+    height: 12rem;
+  }
+  .page2-heading h1 {
+    font-size: 2rem;
+  }
+  .page2-heading p {
+    width: 18rem;
+    font-size: 0.9rem;
+  }
+}
+.page3 {
+  padding: 3rem 0;
+}
+
+.page3-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.page3-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 7rem;
+}
+.page3-content h1 {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 2.7rem;
+  color: #1b1b1d;
+  margin-bottom: 2rem;
+}
+.page3-content p {
+  width: 22rem;
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  margin-bottom: 2rem;
+  color: #64646a;
+}
+.page3-content button {
+  background-color: var(--black);
+  color: #ffffff;
+  padding: 10px 25px;
+  border: none;
+  gap: 10px;
+  border-radius: 63px;
+  font-weight: 500;
+  box-shadow: 0px 30px 60px rgba(163, 168, 179, 0.15);
+  font-family: "Jost", sans-serif;
+  width: 10rem;
+  text-transform: capitalize;
+}
+
+.page3-img img {
+  height: 20rem;
+}
+
+@media screen and (max-width: 992px) {
+  .page3-img img {
+    height: 15rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .page3-content {
+    margin-left: 3rem;
+  }
+  .page3-content h1 {
+    font-size: 2rem;
+  }
+  .page3-content p {
+    width: 17rem;
+    font-size: 0.9rem;
+    padding-right: 0.5rem;
+  }
+}
+@media screen and (max-width: 662px) {
+  .page3-content {
+    margin-left: 3rem;
+  }
+  .page3-content h1 {
+    font-size: 2rem;
+  }
+  .page3-content p {
+    width: 15rem;
+    font-size: 0.9rem;
+    padding-right: 0.5rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .page3-container {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+  .page3-content {
+    margin-left: unset;
+  }
+  .page3-content h1 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+  }
+  .page3-content p {
+    width: 22rem;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+  }
+  .page3-content button {
+    padding: 10px 25px;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 2rem;
+    text-transform: capitalize;
+  }
+}
+@media screen and (max-width: 480px) {
+  .page3-content h1 {
+    font-size: 2rem;
+  }
+  .page3-content p {
+    width: 20rem;
+    font-size: 0.9rem;
+  }
+  .page3-content button {
+    padding: 10px 25px;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 2rem;
+    text-transform: capitalize;
+  }
+}
+.page4 {
+  position: relative;
+}
+
+.page4-head {
+  margin-top: 2rem;
+}
+
+.page4-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.page4-heading h1 {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 2.7rem;
+  text-align: center;
+  color: #1b1b1d;
+}
+.page4-heading p {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  text-align: center;
+  color: #64646a;
+  width: 23rem;
+}
+.page4-heading img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -999;
+}
+
+.page4-cards {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.page4-card {
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.page4-card1 {
+  filter: drop-shadow(0px 20px 60px rgba(163, 168, 179, 0.15));
+  border-radius: 24px;
+  width: 22rem;
+  height: 22.5rem;
+  padding: 1rem;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: 0px 20px 60px 0px rgba(163, 168, 178, 0.15);
+}
+.page4-card1 p {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  color: #64646a;
+  width: 18rem;
+  padding-left: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.page4-img-content {
+  display: flex;
+}
+.page4-img-content img {
+  position: absolute;
+  right: 2rem;
+  top: -3.2rem;
+  filter: drop-shadow(2px 2px black);
+}
+
+.page4-content {
+  padding-left: 1.5rem;
+  padding-top: 1rem;
+}
+.page4-content h3 {
+  line-height: 2rem;
+  margin-bottom: 3rem;
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2rem;
+  color: #1b1b1d;
+}
+.page4-content p {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  color: #64646a;
+}
+
+.page4-button-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.page4-button-content h6 {
+  font-family: "Jost";
+  font-style: normal;
+  font-size: 1.3rem;
+  color: #1b1b1d;
+}
+.page4-button-content button {
+  background-color: var(--black);
+  color: #ffffff;
+  padding: 10px 25px;
+  border: none;
+  gap: 10px;
+  border-radius: 63px;
+  font-weight: 500;
+  box-shadow: 0px 30px 60px rgba(163, 168, 179, 0.15);
+  font-family: "Jost", sans-serif;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+  .page4-heading h1 {
+    font-size: 2rem;
+  }
+  .page4-heading p {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .page4-heading h1 {
+    font-size: 2rem;
+  }
+  .page4-heading p {
+    font-size: 0.9rem;
+    width: 20rem;
+  }
+  .page4-card1 {
+    width: 20rem;
+    height: 22rem;
+    padding: 1rem;
+  }
+  .page4-card1 p {
+    font-size: 0.9rem;
+  }
+  .page4-img-content img {
+    height: 12rem;
+  }
+  .page4-content h3 {
+    font-size: 1.9rem;
+  }
+  .page4-content p {
+    font-size: 0.9rem;
+  }
+  .page4-button-content h6 {
+    font-size: 1.2rem;
+  }
+  .page4-button-content button {
+    padding: 10px 15px;
+    width: 8rem;
+    gap: 8px;
+    font-size: 0.7rem;
+  }
+}
+.page5-main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+
+.page5-content h1 {
+  color: #1b1b1d;
+  font-size: 2.7rem;
+  font-family: Jost;
+  font-weight: 800;
+  margin-bottom: 2rem;
+}
+.page5-content p {
+  width: 21rem;
+  margin-bottom: 2rem;
+  color: #64646a;
+  font-family: Jost;
+}
+.page5-content button {
+  background-color: var(--black);
+  color: #ffffff;
+  padding: 10px 25px;
+  border: none;
+  gap: 10px;
+  border-radius: 63px;
+  font-weight: 500;
+  box-shadow: 0px 30px 60px rgba(163, 168, 179, 0.15);
+  font-family: "Jost", sans-serif;
+}
+
+.page5-img img {
+  height: 33rem;
+  padding-left: 2rem;
+}
+
+.page5-bg-img {
+  position: absolute;
+}
+.page5-bg-img img {
+  height: 22rem;
+}
+
+@media screen and (max-width: 992px) {
+  .page5-img img {
+    height: 28rem;
+  }
+  .page5-content h1 {
+    padding-left: 2rem;
+  }
+  .page5-content p {
+    padding-left: 2rem;
+  }
+  .page5-content button {
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .page5-img img {
+    height: 25rem;
+    padding-left: unset;
+  }
+  .page5-bg-img img {
+    height: 18rem;
+  }
+  .page5-content h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  .page5-content p {
+    width: 18rem;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+  .page5-content button {
+    padding: 9px 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .page5-main {
+    text-align: center;
+    flex-direction: column;
+  }
+  .page5-content h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  .page5-content p {
+    width: 20rem;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+  .page5-content button {
+    width: 100%;
+    padding: 9px 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .page5-content h1 {
+    padding-left: unset;
+  }
+  .page5-content p {
+    padding-left: unset;
+  }
+  .page5-content button {
+    margin-left: unset;
+  }
+}
+.footer {
+  padding-top: 2rem;
+  position: relative;
+}
+
+.footer-img {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.footer-img img {
+  height: 25rem;
+}
+
+.footer-main {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-1 img {
+  height: 4rem;
+  margin-bottom: 1.6rem;
+}
+.footer-1 p {
+  width: 20rem;
+  color: #64646a;
+  font-family: Jost;
+}
+
+.footer-location h3 {
+  color: #1b1b1d;
+  font-size: 1.5rem;
+  font-family: Jost;
+  font-weight: 800;
+  line-height: 3.125rem;
+}
+.footer-location p {
+  width: 20rem;
+  color: #64646a;
+  font-family: Jost;
+}
+
+.footer-location-link {
+  display: flex;
+  align-items: center;
+}
+.footer-location-link a {
+  color: #292929;
+  font-family: Jost;
+  padding-right: 0.5rem;
+}
+
+.footer-contact h3 {
+  color: #1b1b1d;
+  font-size: 1.5rem;
+  font-family: Jost;
+  font-weight: 800;
+  line-height: 3.125rem;
+}
+.footer-contact .footer-email,
+.footer-contact .footer-number {
+  display: flex;
+  margin-bottom: 0.7rem;
+}
+.footer-contact .footer-email i,
+.footer-contact .footer-number i {
+  background-color: rgb(174, 99, 99);
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0px 12px 30px 0px rgba(205, 209, 214, 0.28);
+  color: rgb(100, 100, 106);
+}
+.footer-contact .footer-email p,
+.footer-contact .footer-number p {
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  color: #64646a;
+  font-family: Jost;
+}
+.footer-contact .footer-links {
+  display: flex;
+}
+.footer-contact .footer-links i {
+  background-color: rgb(174, 99, 99);
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0px 12px 30px 0px rgba(205, 209, 214, 0.28);
+  color: rgb(100, 100, 106);
+  margin: 0.4rem;
+}
+.footer-contact .footer-input h3 {
+  color: #1b1b1d;
+  font-size: 1.5rem;
+  font-family: Jost;
+  font-weight: 800;
+  margin-top: 2rem;
+}
+.footer-contact .footer-input input {
+  width: 18rem;
+  border-radius: 65px;
+  background: #fff;
+  box-shadow: 0px 12px 30px 0px rgba(205, 209, 214, 0.28);
+  border: none;
+  height: 3rem;
+  margin: 1rem 0;
+  padding: 0 1.5rem;
+}
+.footer-contact .footer-input input::-moz-placeholder {
+  color: rgb(100, 100, 106);
+  font-family: Jost;
+  line-height: 1.875rem;
+  opacity: 0.6999999881;
+  font-size: 0.9rem;
+}
+.footer-contact .footer-input input::placeholder {
+  color: rgb(100, 100, 106);
+  font-family: Jost;
+  line-height: 1.875rem;
+  opacity: 0.6999999881;
+  font-size: 0.9rem;
+}
+.footer-contact .footer-input button {
+  background-color: var(--black);
+  color: #ffffff;
+  padding: 10px 25px;
+  border: none;
+  gap: 10px;
+  border-radius: 63px;
+  font-weight: 500;
+  box-shadow: 0px 30px 60px rgba(163, 168, 179, 0.15);
+  font-family: "Jost", sans-serif;
+}
+
+@media screen and (max-width: 992px) {
+  .footer-img img {
+    height: 18rem;
+  }
+  .footer-1 img {
+    height: 3rem;
+    margin-bottom: 1.4rem;
+  }
+  .footer-1 p {
+    width: 15rem;
+    line-height: 1.4rem;
+    margin-right: 4rem;
+  }
+  .footer-location h3 {
+    font-size: 1.4rem;
+    line-height: 3.125rem;
+  }
+  .footer-location p {
+    width: 15rem;
+    line-height: 1.4rem;
+  }
+  .footer-contact h3 {
+    font-size: 1.4rem;
+    line-height: 3.125rem;
+  }
+  .footer-contact p {
+    margin-left: 3rem;
+  }
+  .footer-contact .footer-email,
+  .footer-contact .footer-number {
+    margin-bottom: 0.6rem;
+  }
+  .footer-contact .footer-input h3 {
+    font-size: 1.4rem;
+    margin-top: 2rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer-img img {
+    height: 16rem;
+  }
+  .footer-1 img {
+    height: 2.5rem;
+    margin-bottom: 1.2rem;
+  }
+  .footer-1 p {
+    width: 14rem;
+    line-height: 1.1rem;
+    font-size: 0.8rem;
+    margin-right: 4rem;
+  }
+  .footer-location h3 {
+    font-size: 1.3rem;
+    line-height: 3.125rem;
+  }
+  .footer-location p {
+    font-size: 0.8rem;
+    width: 14rem;
+    line-height: 1.1rem;
+  }
+  .footer-location-link a {
+    font-size: 0.9rem;
+  }
+  .footer-contact h3 {
+    font-size: 1.2rem;
+  }
+  .footer-contact .footer-email,
+  .footer-contact .footer-number {
+    margin-bottom: 0.4rem;
+  }
+  .footer-contact .footer-email i,
+  .footer-contact .footer-number i {
+    width: 2.2rem;
+    height: 2.2rem;
+    font-size: 0.8rem;
+  }
+  .footer-contact .footer-email p,
+  .footer-contact .footer-number p {
+    font-size: 0.9rem;
+  }
+  .footer-contact .footer-links i {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+  .footer-contact .footer-input h3 {
+    font-size: 1.2rem;
+  }
+  .footer-contact .footer-input input {
+    width: 15rem;
+    height: 2.7rem;
+  }
+  .footer-contact .footer-input input::-moz-placeholder {
+    font-size: 0.8rem;
+  }
+  .footer-contact .footer-input input::placeholder {
+    font-size: 0.8rem;
+  }
+  .footer-contact .footer-input button {
+    padding: 10px 18px;
+    width: 7rem;
+    gap: 8px;
+    font-size: 0.7rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .footer-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+  .footer-img img {
+    height: 14rem;
+  }
+  .footer-1 img {
+    height: 2.5rem;
+    margin-bottom: 1.2rem;
+    padding-left: 0.5rem;
+  }
+  .footer-1 p {
+    width: 17rem;
+    line-height: 1.4rem;
+    font-size: 1rem;
+    padding-left: 0.5rem;
+    margin-right: unset;
+  }
+  .footer-location h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    padding-left: 0.5rem;
+  }
+  .footer-location p {
+    padding-left: 0.5rem;
+    font-size: 1.1rem;
+    width: 17rem;
+    line-height: 1.3rem;
+  }
+  .footer-location-link {
+    justify-content: center;
+  }
+  .footer-location-link a {
+    font-size: 1.1rem;
+    padding-left: 0.5rem;
+  }
+  .footer-contact h3 {
+    font-size: 1.4rem;
+    padding-left: 0.5rem;
+  }
+  .footer-contact .footer-email i,
+  .footer-contact .footer-number i {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 0.9rem;
+  }
+  .footer-contact .footer-email p,
+  .footer-contact .footer-number p {
+    font-size: 1.1rem;
+  }
+  .footer-contact .footer-links i {
+    width: 2.5rem;
+    font-size: 0.9rem;
+    height: 2.5rem;
+  }
+  .footer-contact .footer-input h3 {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+  .footer-contact .footer-input input {
+    margin-top: unset;
+    width: 15rem;
+    height: 2.5rem;
+  }
+  .footer-contact .footer-input input::-moz-placeholder {
+    font-size: 0.8rem;
+  }
+  .footer-contact .footer-input input::placeholder {
+    font-size: 0.8rem;
+  }
+  .footer-contact .footer-input button {
+    padding: 7.5px 15px;
+    width: 6rem;
+    gap: 8px;
+    font-size: 0.7rem;
+  }
+}
+.bottom-content {
+  display: flex;
+  justify-content: space-between;
+}
+.bottom-content .bottom-left p {
+  color: #64646a;
+  font-family: Jost;
+  line-height: 1.875rem;
+}
+.bottom-content .bottom-left p span {
+  color: rgb(27, 27, 29);
+}
+.bottom-content .bottom-right p {
+  color: #64646a;
+  font-family: Jost;
+  line-height: 1.875rem;
+}
+
+@media screen and (max-width: 768px) {
+  .bottom-left p {
+    font-size: 0.8rem;
+  }
+  .bottom-right p {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .bottom-left p {
+    font-size: 0.7rem;
+  }
+  .bottom-right p {
+    font-size: 0.7rem;
+  }
+}/*# sourceMappingURL=style.css.map */
