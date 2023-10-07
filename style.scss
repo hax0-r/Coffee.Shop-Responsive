@@ -130,6 +130,7 @@ header {
 
 .nav-list {
   display: none;
+  z-index: 999999;
 }
 @keyframes myAnim {
 	0% {
