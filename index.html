@@ -370,7 +370,7 @@
               </div>
               <div class="footer-input">
                 <h3>First One’s On Us!</h3>
-                <input type="email" placeholder="E-mail" /><br>
+                <input type="email" placeholder="E-mail" id="footer-mail" required /><br>
                 <button>Subscribe</button>
               </div>
             </div>
@@ -412,6 +412,33 @@
   </div>
   <!-- only for background -->
 </body>
+<!-- -----gsap---- -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+
+  let lineWise =  gsap.timeline()
+  lineWise.from(".nav-img,.nav-icon-purchase-btn",{
+    y:-100,
+    duration:.8,
+    delay:.5,
+  })
+  lineWise.from(".nav-links ul li",{
+    y:-100,
+    duration:.5,
+    stagger:.5
+  })
+  gsap.from(".page1-img,.page1-content1",{
+    opacity:0,
+    delay:.5,
+    scale:0,
+    duration:1
+  })
+</script>
+
+<!-- -----gsap---- -->
+
 <script src="./index.js"></script>
 
 </html>

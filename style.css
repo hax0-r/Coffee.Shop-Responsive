@@ -230,6 +230,7 @@ header {
   position: fixed;
   right: 2rem;
   bottom: 2.5rem;
+  cursor: pointer;
 }
 #btnScroll i {
   display: flex;
